@@ -65,7 +65,7 @@ or themes. It can be useful on a live blog, but make sure you understand the use
 
 Not at this time. Timber is primarily a debugging tool for developers, meant to trace programming errors to 
 their source. There are several types of "expected" errors that Wordpress handles, including those managed by 
-the WP_Error class, that Timber does not monitor. Many of these are not solvable, in the permanent sense — such 
+the WP_Error class, that Timber does not monitor. Many of these are not solvable, in the permanent sense - such 
 as an error message that occurs when a user attempts to login with an incorrect password. As such, they would 
 only clutter the error logs.
 
