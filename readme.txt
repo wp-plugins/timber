@@ -14,7 +14,7 @@ errors at multiple levels, and provides detailed stack trace and debug informati
 the [Role Manager](http://www.im-web-gefunden.de/wordpress-plugins/role-manager/) plugin to allow user 
 & role specific permissions to be set to view and/or clear errors.
 
-Timber is intended primarily as a developer’s tool, to be enabled in a sandbox environment while debugging 
+Timber is intended primarily as a developer's tool, to be enabled in a sandbox environment while debugging 
 plugins or themes in-progress. However, it also has potential in a production setting, as a way to hide 
 errors from the end-user while still logging them for administrator review. The configuration settings 
 allow for precise control of what type of errors and what error information is logged, so it can be deployed 
@@ -36,17 +36,17 @@ Installing Timber is simple and straightforward.
 = Is Timber safe to install on my public blog? =
 
 Maybe. There are several things that could wreak havoc when installing Timber on a live Wordpress site, 
-and it’s important to understand what they are. As a start, follow these two steps:
+and it's important to understand what they are. As a start, follow these two steps:
 
-**1) Don’t log Notices or Strict messages.**
-The average PHP script, even the well-written ones, commits several “minor infractions” on every execution. 
+**1) Don't log Notices or Strict messages.**
+The average PHP script, even the well-written ones, commits several "minor infractions" on every execution. 
 This includes many of the scripts in the Wordpress core. If Notices or Strict messages are enabled for 
 logging, it will result in many multiple errors logged each and every time any user loads any page of your site.
 
 **2) Keep an eye on your logs for awhile.**
 Even with Notices and Strict messages disabled, some themes or plugins may generate a number of Warnings 
 or other error types. Since these will be logged every time the offending page is loaded, the logs may still 
-fill quickly depending on your site traffic. If this starts to happen, you’ll want to disable logging entirely, 
+fill quickly depending on your site traffic. If this starts to happen, you'll want to disable logging entirely, 
 or clear the logs regularly.
 
 Clearly, the main concern is the logs filling too much or too fast. Why is this a problem? Timber logs errors 
@@ -64,13 +64,13 @@ or themes. It can be useful on a live blog, but make sure you understand the use
 = Does Timber log non-PHP Wordpress errors? =
 
 Not at this time. Timber is primarily a debugging tool for developers, meant to trace programming errors to 
-their source. There are several types of “expected” errors that Wordpress handles, including those managed by 
+their source. There are several types of "expected" errors that Wordpress handles, including those managed by 
 the WP_Error class, that Timber does not monitor. Many of these are not solvable, in the permanent sense — such 
 as an error message that occurs when a user attempts to login with an incorrect password. As such, they would 
 only clutter the error logs.
 
 That being said, there are certain error types, such as 404s, that future versions of Timber would benefit from 
-logging. Feel free to request features and let us know how you’re using Timber.
+logging. Feel free to request features and let us know how you're using Timber.
 
 = Why is Wordpress 2.7 required? =
 
@@ -79,3 +79,7 @@ versions of Wordpress, although the admin screens may not match the formatting w
 upcoming 1.0 release is to be tested and fully compatible with versions at least as early as 2.5.
 
 == Screenshots ==
+
+1. The errors list view.
+2. Timber displays an alert in the Wordpress sidebar. Unread error count is maintained per-user.
+3. Detailed error information rolls down -- pulled via AJAX when requested.
